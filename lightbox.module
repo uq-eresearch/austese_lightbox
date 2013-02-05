@@ -1,0 +1,83 @@
+<?php
+
+/**
+ * @file
+ * Module file for Light Box Tool
+ */
+
+/**
+ * @defgroup lightbox AustESE Light Box
+ * @ingroup austese
+ * @{
+ * AustESE Light Box Tool
+ *
+ */
+
+/**
+ * Implements hook_help().
+ *
+ */
+function lightbox_help($path, $arg) {
+  switch ($path) {
+    case 'lightbox':
+      return t('AustESE Light Box');
+    case 'admin/help#lightbox':
+      return t('AustESE Light Box');
+  }
+}
+
+/**
+ * Implements hook_permission().
+ *
+ */
+function lightbox_permission() {
+  return array(
+    'view light box' => array(
+      'title' => t('View light box'),
+      'description' => t('Allow users to view light box'),
+    )
+  );
+}
+
+/**
+ * Implements hook_menu().
+ *
+ *
+ * @see hook_menu()
+ * @see menu_example
+ */
+function lightbox_menu() {
+
+  $items['lightbox'] = array(
+    'title' => 'Light Box',
+    'page callback' => 'lightbox_view',
+    'access arguments' => array('view light box'),
+    'type' => MENU_CALLBACK
+  );
+  return $items;
+}
+function lightbox_view($resources=null) {
+  $breadcrumb = array();
+  $breadcrumb[] = l('Home', '<front>');
+  $breadcrumb[] = l('Light Box', 'lightbox');
+  $breadcrumb[] = t(drupal_get_title()); 
+  drupal_set_breadcrumb($breadcrumb);
+  $modulePath = drupal_get_path('module', 'lightbox');
+  drupal_add_css($modulePath . '/ui/css/app.css');
+  drupal_add_js('/sites/all/libraries/ext-4.1.1a/ext-all.js');
+  drupal_add_js($modulePath . '/ui/app.js');
+  return theme('extjsapplb',array('resources'=>$resources));
+}
+
+function lightbox_theme(){
+ return array(
+    'extjsapplb' => array(
+       'template' => 'lightboxui',
+       'variables' => array('resources'=> null)
+     )
+ );
+}
+
+/**
+ * @} End of "defgroup lightbox".
+ */

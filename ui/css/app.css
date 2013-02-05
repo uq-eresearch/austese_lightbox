@@ -1,0 +1,53 @@
+.addIcon {
+    background-image:url(../img/plus_16x16.png);
+}
+.fullscreenIcon {
+    background-image:url(../img/fullscreen_16x16.png);
+}
+.infoIcon {
+    background-image:url(../img/info.png);
+}
+.homeIcon{
+    background-image:url(../img/home_icon_16.png);
+}
+.rotateLeft {
+    background-image:url(../img/curved_arrow_left_16x12.png);
+}
+.rotateRight {
+    background-image:url(../img/curved_arrow_16x12.png);
+}
+.exitFullscreenIcon {
+    background-image:url(../img/fullscreen_exit_16x16.png);
+}
+.rotate90 {
+   -webkit-transform: rotate(90deg);
+   -moz-transform: rotate(90deg);
+   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+   position: absolute;
+   left: -25%;
+   top: -25%;
+}
+.rotate180 {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    position: absolute;
+}
+.rotate270 {
+   -webkit-transform: rotate(270deg);
+   -moz-transform: rotate(270deg);
+   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+   position: absolute;
+   left: -25%;
+   top: -25%;
+}
+/* override bootstrap CSS for Ext form elements */
+#tableappwindow .x-form-checkbox {
+    width:13px;
+}
+.x-form-item-body label {
+    display: inline;
+}
+.x-box-inner .x-tool img {
+    height: 18px;
+}
