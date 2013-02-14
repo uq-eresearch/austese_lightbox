@@ -5,6 +5,7 @@ Ext.define('LightBoxApp.view.LightBox', {
     header:false,
     resizeHandles: '',
     width: 600,
+    autoScroll: true,
     layout: 'fit',
     requires: [
     ],

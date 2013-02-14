@@ -1,7 +1,7 @@
 Ext.define('LightBoxApp.view.ResourceChooser', {
     extend: 'Ext.window.Window',
     width: 320,
-    height: 480,
+    height: 400,
     autoShow: true,
     layout: 'fit',
     title: 'Select resources to display',
