@@ -31,6 +31,7 @@ Ext.application({
     ],
     launch: function(){
         var placeholder = Ext.get('uiplaceholder');
+        Ext.getBody().setStyle('overflow', 'hidden');
         var mainWindow = Ext.create('LightBoxApp.view.LightBox',{
             renderTo: Ext.getBody(),
         }).showAt(placeholder.getX(),placeholder.getY());
