@@ -21,8 +21,8 @@ Ext.define('LightBoxApp.controller.LightBoxAppController', {
         var newHeight = h - (placeholder.getY());
         var newWidth = w - placeholder.getX()*2;
         placeholder.setHeight(newHeight);
-        uiPanel.setHeight(newHeight);
         placeholder.setWidth(newWidth);
+        uiPanel.setHeight(newHeight);
         uiPanel.setWidth(newWidth);
         uiPanel.showAt(placeholder.getX(), placeholder.getY());
     },
