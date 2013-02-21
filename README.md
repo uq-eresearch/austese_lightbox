@@ -11,3 +11,7 @@ How to use this module:
 License: GPL 3.0
 
 This module was developed as part of the [AustESE project](http://itee.uq.edu.au/~eresearch/projects/austese).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/uq-eresearch/austese_lightbox/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
