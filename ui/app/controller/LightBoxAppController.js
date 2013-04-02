@@ -42,8 +42,12 @@ Ext.define('LightBoxApp.controller.LightBoxAppController', {
                     resid: resid,
                     x: Math.random()*500,
                     y: Math.random()*100,
-                    html: "<img src='" + resurl + "' alt='image'>",
+                    html: "<div data-id='" + this.baseurl + "/repository/resources/" + resid + "/content'><img src='" + resurl + "' alt='image'></div>",
+                    
                 });
+                win.on("activate",function(){
+                    if (typeof enableAnnotations == "function"){enableAnnotations();}
+                }, win, {single:true});
             }
             lightbox.doLayout();
         }
@@ -128,6 +132,7 @@ Ext.define('LightBoxApp.controller.LightBoxAppController', {
         }
     },
     init: function(application) {
+        this.baseurl = jQuery('#metadata').data('baseurl');
         Ext.EventManager.onWindowResize(this.resizeUI, this);
         this.control({
             "#addButton": {

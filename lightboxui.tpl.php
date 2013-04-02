@@ -15,6 +15,7 @@ if (property_exists($user,'data')){
  <?php if ($fullscreen):?>
  data-fullscreen="<?php print $fullscreen; ?>"
  <?php endif; ?>
+ data-baseurl="http://<?php print $_SERVER['SERVER_NAME']; ?>"
  data-moduleprefix="<?php print $modulePrefix; ?>"
  data-modulepath="<?php print drupal_get_path('module', 'lightbox'); ?>">
 </div>
