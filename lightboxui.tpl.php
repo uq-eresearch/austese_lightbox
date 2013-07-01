@@ -10,10 +10,17 @@ if (property_exists($user,'data')){
 } else {
  $fullscreen = false;
 }
+$project = null;
+if (isset($_GET['project'])) {
+ $project = $_GET['project'];
+}
 ?>
 <div id="metadata"
  <?php if ($fullscreen):?>
  data-fullscreen="<?php print $fullscreen; ?>"
+ <?php endif; ?>
+ <?php if ($project):?>
+ data-project="<?php print $project; ?>"
  <?php endif; ?>
  data-baseurl="http://<?php print $_SERVER['SERVER_NAME']; ?>"
  data-moduleprefix="<?php print $modulePrefix; ?>"

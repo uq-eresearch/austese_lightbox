@@ -12,7 +12,7 @@ Ext.define('LightBoxApp.store.ResourceStore', {
         var me = this;
         cfg = cfg || {};
         me.callParent([Ext.apply({
-            autoLoad: true,
+            autoLoad: false,
             storeId: 'ResourceStore',
             model: 'LightBoxApp.model.ResourceModel',
             proxy: {
@@ -21,6 +21,9 @@ Ext.define('LightBoxApp.store.ResourceStore', {
                 reader: {
                     type: 'json',
                     root: 'results'
+                },
+                extraParams: {
+                    project: ''
                 }
             }
         }, cfg)]);

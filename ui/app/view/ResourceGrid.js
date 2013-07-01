@@ -31,6 +31,7 @@ Ext.define('LightBoxApp.view.ResourceGrid', {
             ]
         });
         me.callParent(arguments);
+        me.store.load();
         me.store.sort();
     }
 });
