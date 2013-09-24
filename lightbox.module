@@ -59,6 +59,12 @@ function lightbox_menu() {
 function lightbox_view($resources=null) {
   $breadcrumb = array();
   $breadcrumb[] = l('Home', '<front>');
+  $projectParam = _get_projectParam();
+  if (isset($_GET['project'])) {
+      $project = node_load($_GET['project']);
+      $breadcrumb[] = l($project->title, 'node/' . $project->nid, $projectParam);
+  } 
+  $breadcrumb[] = l('Resources','repository/resources', $projectParam);
   $breadcrumb[] = l('Light Box', 'lightbox');
   $breadcrumb[] = t(drupal_get_title()); 
   drupal_set_breadcrumb($breadcrumb);
