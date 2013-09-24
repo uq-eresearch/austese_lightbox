@@ -65,7 +65,6 @@ function lightbox_view($resources=null) {
       $breadcrumb[] = l($project->title, 'node/' . $project->nid, $projectParam);
   } 
   $breadcrumb[] = l('Resources','repository/resources', $projectParam);
-  $breadcrumb[] = l('Light Box', 'lightbox');
   $breadcrumb[] = t(drupal_get_title()); 
   drupal_set_breadcrumb($breadcrumb);
   $modulePath = drupal_get_path('module', 'lightbox');
