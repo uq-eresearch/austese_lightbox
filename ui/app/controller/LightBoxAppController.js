@@ -19,7 +19,7 @@ Ext.define('LightBoxApp.controller.LightBoxAppController', {
         var uiPanel = Ext.ComponentQuery.query("lightbox")[0];
         var placeholder = Ext.get('uiplaceholder');
         var newHeight = h - (placeholder.getY());
-        var newWidth = w - placeholder.getX()*2;
+        var newWidth = w - placeholder.getX() - 30;
         placeholder.setHeight(newHeight);
         placeholder.setWidth(newWidth);
         uiPanel.setHeight(newHeight);
