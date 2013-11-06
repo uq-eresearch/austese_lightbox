@@ -35,14 +35,15 @@ Ext.define('LightBoxApp.controller.LightBoxAppController', {
             this.resources.push(resid);
             if (resource.get('filetype').match('image')){
                 // create new window in lightbox with resource
+                var title = resource.get('title') || resource.get('filename');
                 var win = Ext.create('LightBoxApp.view.LightBoxWindow', {
                     renderTo: lightbox.body,
-                    title: (resource.get('title') || resource.get('filename')),
+                    title: title,
                     resurl: resurl,
                     resid: resid,
                     x: Math.random()*500,
                     y: Math.random()*100,
-                    html: "<div data-id='" + this.baseurl + "/repository/resources/" + resid + "/content'><img src='" + resurl + "' alt='image'></div>",
+                    html: "<div data-annolabel='"+title+"' data-id='" + this.baseurl + "/repository/resources/" + resid + "/content'><img src='" + resurl + "' alt='image'></div>",
                     
                 });
                 win.on("activate",function(){
