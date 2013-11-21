@@ -7,6 +7,7 @@ How to use this module:
 * Ensure that you have installed the [austese_repository](https://github.com/uq-eresearch/austese_repository/) module
 * Install this module to sites/all/modules/austese_lightbox
 * Enable module via drupal admin console
+* Configure permissions via the drupal admin console
 
 License: GPL 3.0
 
